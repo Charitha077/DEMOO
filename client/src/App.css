@@ -1,0 +1,146 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* ===============================
+   CAPTCHA – HARD ALIGNMENT FIX
+   =============================== */
+
+/* Outer wrapper */
+.captcha-container {
+  width: 100%;
+}
+
+/* Internal captcha row (whatever div Captcha renders) */
+.captcha-container > div {
+  position: relative;
+  width: 100%;
+}
+
+/* Question: "9 + 4 =" */
+.captcha-container span {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+/* Answer input — FORCE SAME WIDTH AS OTHER INPUTS */
+.captcha-container input {
+  width: calc(100% - 70px - 52px - 24px);
+  /* 100% minus:
+     question (70px)
+     refresh button (52px)
+     spacing (24px)
+  */
+
+  padding: 0.5rem 1rem;            /* py-2 px-4 */
+  font-size: 1rem;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+/* Focus identical to other inputs */
+.captcha-container input:focus {
+  border-color: #26272b;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.5);
+}
+
+/* Refresh button — ABSOLUTE RIGHT */
+.captcha-container button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+
+  border-radius: 0.5rem;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.captcha-container button:hover {
+  background: #d1d5db;
+}
+
+
+/* ===============================
+   INPUT FIELDS – MATCH LOGIN STYLE
+   =============================== */
+
+.input-field {
+  width: 100%;
+  padding: 0.5rem 1rem;           /* px-4 py-2 */
+  background-color: #f3f4f6;      /* bg-gray-100 */
+  border: 1px solid #d1d5db;      /* gray-300 border */
+  border-radius: 0.5rem;          /* rounded */
+  color: #374151;                 /* text-gray-700 */
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Hover → slightly darker */
+.input-field:hover {
+  background-color: #e5e7eb;      /* gray-200 */
+  border-color: #9ca3af;          /* gray-400 */
+}
+
+/* Focus → blue highlight */
+.input-field:focus {
+  background-color: #ffffff;
+  border-color: #2563eb;          /* blue-600 */
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
+}
+
+/* Dropdown arrow consistency */
+select.input-field {
+  cursor: pointer;
+}
